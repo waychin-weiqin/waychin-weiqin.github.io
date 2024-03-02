@@ -15,3 +15,19 @@ My passion lies not only in advancing theoretical knowledge but also in applying
 
 Thank you for stopping by to learn about my professional journey and interests. I'm always open to collaborative opportunities and discussions in the fields of ML and CV. Let's connect!
 
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if author.googlescholar %}
+  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% endif %}
+
+{% include base_path %}
+
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
