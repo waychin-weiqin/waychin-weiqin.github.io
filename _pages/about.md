@@ -15,13 +15,13 @@ Thank you for stopping by to learn about my professional journey and interests. 
 
 
 
-Publications
-<!-- ---
+<b>Publications<b>
+---
 layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
---- -->
+---
 
 {% if author.googlescholar %}
   You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
