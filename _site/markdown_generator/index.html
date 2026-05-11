@@ -1,94 +1,23 @@
 
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
   <head>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeiQin Chuah</title>
+    <meta name="description" content="Lecturer, School of Mechanical, Mechatronics and Manufacturing Engineering, RMIT University">
 
-<meta charset="utf-8">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Academicons -->
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css">
 
-
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>Jupyter notebook markdown generator - WeiQin Chuah</title>
-
-
-
-
-
-
-
-<meta property="og:locale" content="en-US">
-<meta property="og:site_name" content="WeiQin Chuah">
-<meta property="og:title" content="Jupyter notebook markdown generator">
-
-
-  <link rel="canonical" href="http://localhost:4000/markdown_generator/">
-  <meta property="og:url" content="http://localhost:4000/markdown_generator/">
-
-
-
-
-
-
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "WeiQin Chuah",
-      "url" : "http://localhost:4000",
-      "sameAs" : null
-    }
-  </script>
-
-
-
-
-
-
-<!-- end SEO -->
-
-
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="WeiQin Chuah Feed">
-
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
-
-<meta http-equiv="cleartype" content="on">
     
 
 <!-- Google Fonts: Inter -->
@@ -116,218 +45,569 @@
 
 <!-- end custom head snippets -->
 
+
+    <style>
+      :root {
+        --color-primary: #1a56db;
+        --color-primary-light: #e8effd;
+        --color-accent: #7c3aed;
+        --color-text: #1f2937;
+        --color-text-secondary: #6b7280;
+        --color-bg: #ffffff;
+        --color-bg-alt: #f8fafc;
+        --color-border: #e5e7eb;
+        --color-card-bg: #ffffff;
+        --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+        --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+        --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        --radius: 12px;
+        --max-width: 860px;
+      }
+
+      [data-theme="dark"] {
+        --color-primary: #60a5fa;
+        --color-primary-light: #1e3a5f;
+        --color-accent: #a78bfa;
+        --color-text: #f1f5f9;
+        --color-text-secondary: #94a3b8;
+        --color-bg: #0f172a;
+        --color-bg-alt: #1e293b;
+        --color-border: #334155;
+        --color-card-bg: #1e293b;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+        --shadow-lg: 0 8px 24px rgba(0,0,0,0.4);
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--color-text);
+        background: var(--color-bg);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Floating theme toggle */
+      .theme-toggle {
+        position: fixed;
+        top: 1.2rem;
+        right: 1.5rem;
+        z-index: 100;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+        font-size: 1rem;
+        color: var(--color-text-secondary);
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-md);
+        transition: all 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        transform: scale(1.05);
+      }
+
+      /* Main Content */
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* Hero / About */
+      .hero {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .hero__avatar {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--color-border);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .hero__info h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+        letter-spacing: -0.02em;
+      }
+
+      .hero__title {
+        font-size: 1.05rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      .hero__desc {
+        color: var(--color-text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.7;
+      }
+
+      .hero__links {
+        display: flex;
+        gap: 0.6rem;
+      }
+
+      .hero__links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+        color: var(--color-text-secondary);
+        background: var(--color-bg-alt);
+        border: 1px solid var(--color-border);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .hero__links a:hover {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        background: var(--color-primary-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Sections */
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .section__title::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 1.2em;
+        background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+        border-radius: 2px;
+      }
+
+      .divider {
+        border: none;
+        height: 1px;
+        background: var(--color-border);
+      }
+
+      /* Research interests grid */
+      .research-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+      }
+
+      .research-card {
+        padding: 1.5rem;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        transition: all 0.25s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .research-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+
+      .research-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+      }
+
+      .research-card:hover::after {
+        opacity: 1;
+      }
+
+      .research-card__icon {
+        font-size: 1.4rem;
+        color: var(--color-primary);
+        margin-bottom: 0.8rem;
+      }
+
+      .research-card__title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--color-text);
+        margin-bottom: 0.7rem;
+      }
+
+      .research-card__topics {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .research-card__topics li {
+        font-size: 0.82rem;
+        color: var(--color-text-secondary);
+        padding: 0.25rem 0;
+        padding-left: 0.9rem;
+        position: relative;
+      }
+
+      .research-card__topics li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.65em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--color-border);
+      }
+
+      .research-card:hover .research-card__topics li::before {
+        background: var(--color-primary);
+      }
+
+      @media (max-width: 640px) {
+        .research-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Publications */
+      .pub-year {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 2px solid var(--color-primary-light);
+      }
+
+      .pub-year:first-of-type {
+        margin-top: 0;
+      }
+
+      .pub-item {
+        padding: 1rem 1.2rem;
+        margin-bottom: 0.6rem;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        transition: all 0.2s ease;
+      }
+
+      .pub-item:hover {
+        border-color: var(--color-primary);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-1px);
+      }
+
+      .pub-item__title {
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: var(--color-text);
+        margin-bottom: 0.25rem;
+      }
+
+      .pub-item__authors {
+        font-size: 0.83rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 0.2rem;
+      }
+
+      .pub-item__venue {
+        font-size: 0.82rem;
+        font-style: italic;
+        color: var(--color-text-secondary);
+      }
+
+      .pub-item__links {
+        margin-top: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .pub-item__links a {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.6rem;
+        border-radius: 4px;
+        text-decoration: none;
+        background: var(--color-primary-light);
+        color: var(--color-primary);
+        transition: all 0.15s ease;
+      }
+
+      .pub-item__links a:hover {
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      /* Teaching */
+      .teaching-grid {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .teaching-card {
+        padding: 1rem 1.2rem;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+      }
+
+      .teaching-card__code {
+        font-family: var(--font-mono);
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        white-space: nowrap;
+      }
+
+      .teaching-card__name {
+        font-size: 0.92rem;
+        color: var(--color-text);
+      }
+
+      .teaching-prev {
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        color: var(--color-text-secondary);
+      }
+
+      /* Recruitment CTA */
+      .cta-box {
+        background: linear-gradient(135deg, var(--color-primary-light), rgba(124,58,237,0.06));
+        border: 1px solid var(--color-primary);
+        border-radius: var(--radius);
+        padding: 1.5rem 1.8rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+      }
+
+      .cta-box__title {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+        color: var(--color-text);
+      }
+
+      .cta-box__text {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 0.6rem;
+      }
+
+      .cta-box ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0.8rem;
+      }
+
+      .cta-box ul li {
+        font-size: 0.88rem;
+        color: var(--color-text);
+        padding: 0.2rem 0;
+        padding-left: 1.2rem;
+        position: relative;
+      }
+
+      .cta-box ul li::before {
+        content: '\2022';
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+
+      /* Service pills */
+      .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .service-list span {
+        padding: 0.35rem 0.8rem;
+        background: var(--color-bg-alt);
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 2rem 0;
+        margin-top: 2rem;
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+        font-size: 0.82rem;
+        color: var(--color-text-secondary);
+      }
+
+      /* Responsive */
+      @media (max-width: 640px) {
+        .hero__grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 1.5rem;
+        }
+
+        .hero__avatar {
+          width: 140px;
+          height: 140px;
+          margin: 0 auto;
+        }
+
+        .hero__links {
+          justify-content: center;
+        }
+
+        .nav__links {
+          gap: 1rem;
+        }
+
+        .nav__links a {
+          font-size: 0.8rem;
+        }
+
+        .section__title {
+          font-size: 1.3rem;
+        }
+
+        .interests {
+          justify-content: center;
+        }
+      }
+
+      /* Scroll animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Floating theme toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
 
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
-    
-
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">WeiQin Chuah</a></li>
-          
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
-</div>
-
-    
-
-
-
-
-
-<div id="main" role="main">
-  
-
-
-  <div class="sidebar sticky">
-  
-
-
-
-<div itemscope itemtype="http://schema.org/Person">
-
-  <div class="author__avatar">
-    
-    	<img src="http://localhost:4000/images/profile.png" class="author__avatar" alt="WeiQin Chuah">
-    
-  </div>
-
-  <div class="author__content">
-    <h3 class="author__name">WeiQin Chuah</h3>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Melbourne, Victoria, Australia</li>
-      
-      
-      
-      
-        <li><a href="mailto:wei.qin.chuah@rmit.edu.au"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
-      
-      
-       
-      
-        <li><a href="https://twitter.com/ChuahWeiqin"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-      
-      
-      
-      
-        <li><a href="https://www.linkedin.com/in/weiqin-chuah"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-      
-      
-      
-      
-      
-      
-        <li><a href="https://github.com/waychin-weiqin"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-        <li><a href="https://scholar.google.com/citations?hl=en&user=u11O9ggAAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
-      
-      
-      
-        <li><a href="http://orcid.org/0000-0001-6020-4660"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
-      
-      
-      
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Jupyter notebook markdown generator">
-    
-    
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 class="page__title" itemprop="headline">Jupyter notebook markdown generator
-</h1>
-          
-        
-        
-        
-        
-             
-        
-    
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        <h1 id="jupyter-notebook-markdown-generator">Jupyter notebook markdown generator</h1>
+    <div class="container">
+      <h1 id="jupyter-notebook-markdown-generator">Jupyter notebook markdown generator</h1>
 
 <p>These .ipynb files are Jupyter notebook files that convert a TSV containing structured data about talks (<code class="language-plaintext highlighter-rouge">talks.tsv</code>) or presentations (<code class="language-plaintext highlighter-rouge">presentations.tsv</code>) into individual markdown files that will be properly formatted for the academicpages template. The notebooks contain a lot of documentation about the process. The .py files are pure python that do the same things if they are executed in a terminal, they just don’t have pretty documentation.</p>
 
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-
-
-      </footer>
-
-      
-
-      
-
-
     </div>
 
-    
-  </article>
+    <footer class="footer">
+      <div class="container">
+        &copy; 2026 WeiQin Chuah &middot; Built with Jekyll
+      </div>
+    </footer>
 
-  
-  
-</div>
+    <script>
+      // Dark mode toggle
+      function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+      }
 
+      function updateIcon(theme) {
+        const icon = document.querySelector('.theme-toggle i');
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
 
-    <div class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-<a href="/sitemap/">Sitemap</a>
-<!-- end custom footer snippets -->
+      // Load saved theme (default to light)
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      updateIcon(saved);
 
-        
+      // Scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
 
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    
-      <li><strong>Follow:</strong></li>
-    
-    
-    
-    
-      <li><a href="http://github.com/waychin-weiqin"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-    
-    
-    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-  </ul>
-</div>
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-<div class="page__footer-copyright">&copy; 2026 WeiQin Chuah. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
-
-      </footer>
-    </div>
-
-    <script src="http://localhost:4000/assets/js/main.min.js"></script>
-
-
-
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-</script>
-
-
-
-
-
-
+    </script>
   </body>
 </html>
-

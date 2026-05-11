@@ -1,5 +1,4 @@
 ---
-layout: compress
 ---
 
 {% include base_path %}
@@ -566,9 +565,8 @@ layout: compress
         icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
       }
 
-      // Load saved theme
-      const saved = localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      // Load saved theme (default to light)
+      const saved = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-theme', saved);
       updateIcon(saved);
 
