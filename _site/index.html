@@ -1,0 +1,847 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeiQin Chuah</title>
+    <meta name="description" content="Lecturer, School of Mechanical, Mechatronics and Manufacturing Engineering, RMIT University">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Academicons -->
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css">
+
+    
+
+<!-- Google Fonts: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://localhost:4000/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="60x60" href="http://localhost:4000/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:4000/images/apple-touch-icon-76x76.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:4000/images/apple-touch-icon-120x120.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:4000/images/apple-touch-icon-152x152.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/images/apple-touch-icon-180x180.png?v=M44lzPylqQ">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-32x32.png?v=M44lzPylqQ" sizes="32x32">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/android-chrome-192x192.png?v=M44lzPylqQ" sizes="192x192">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-96x96.png?v=M44lzPylqQ" sizes="96x96">
+<link rel="icon" type="image/png" href="http://localhost:4000/images/favicon-16x16.png?v=M44lzPylqQ" sizes="16x16">
+<link rel="manifest" href="http://localhost:4000/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="http://localhost:4000/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="http://localhost:4000/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="http://localhost:4000/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- end custom head snippets -->
+
+
+    <style>
+      :root {
+        --color-primary: #1a56db;
+        --color-primary-light: #e8effd;
+        --color-accent: #7c3aed;
+        --color-text: #1f2937;
+        --color-text-secondary: #6b7280;
+        --color-bg: #ffffff;
+        --color-bg-alt: #f8fafc;
+        --color-border: #e5e7eb;
+        --color-card-bg: #ffffff;
+        --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+        --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+        --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+        --radius: 12px;
+        --max-width: 860px;
+      }
+
+      [data-theme="dark"] {
+        --color-primary: #60a5fa;
+        --color-primary-light: #1e3a5f;
+        --color-accent: #a78bfa;
+        --color-text: #f1f5f9;
+        --color-text-secondary: #94a3b8;
+        --color-bg: #0f172a;
+        --color-bg-alt: #1e293b;
+        --color-border: #334155;
+        --color-card-bg: #1e293b;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+        --shadow-lg: 0 8px 24px rgba(0,0,0,0.4);
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--color-text);
+        background: var(--color-bg);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Floating theme toggle */
+      .theme-toggle {
+        position: fixed;
+        top: 1.2rem;
+        right: 1.5rem;
+        z-index: 100;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+        font-size: 1rem;
+        color: var(--color-text-secondary);
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-md);
+        transition: all 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        transform: scale(1.05);
+      }
+
+      /* Main Content */
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* Hero / About */
+      .hero {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .hero__avatar {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--color-border);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .hero__info h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+        letter-spacing: -0.02em;
+      }
+
+      .hero__title {
+        font-size: 1.05rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      .hero__desc {
+        color: var(--color-text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.7;
+      }
+
+      .hero__links {
+        display: flex;
+        gap: 0.6rem;
+      }
+
+      .hero__links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+        color: var(--color-text-secondary);
+        background: var(--color-bg-alt);
+        border: 1px solid var(--color-border);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .hero__links a:hover {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        background: var(--color-primary-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Sections */
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .section__title::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 1.2em;
+        background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+        border-radius: 2px;
+      }
+
+      .divider {
+        border: none;
+        height: 1px;
+        background: var(--color-border);
+      }
+
+      /* Research interests grid */
+      .research-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+      }
+
+      .research-card {
+        padding: 1.5rem;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        transition: all 0.25s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .research-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+
+      .research-card:hover {
+        border-color: var(--color-primary);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+      }
+
+      .research-card:hover::after {
+        opacity: 1;
+      }
+
+      .research-card__icon {
+        font-size: 1.4rem;
+        color: var(--color-primary);
+        margin-bottom: 0.8rem;
+      }
+
+      .research-card__title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--color-text);
+        margin-bottom: 0.7rem;
+      }
+
+      .research-card__topics {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .research-card__topics li {
+        font-size: 0.82rem;
+        color: var(--color-text-secondary);
+        padding: 0.25rem 0;
+        padding-left: 0.9rem;
+        position: relative;
+      }
+
+      .research-card__topics li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.65em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--color-border);
+      }
+
+      .research-card:hover .research-card__topics li::before {
+        background: var(--color-primary);
+      }
+
+      @media (max-width: 640px) {
+        .research-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Publications */
+      .pub-year {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 2px solid var(--color-primary-light);
+      }
+
+      .pub-year:first-of-type {
+        margin-top: 0;
+      }
+
+      .pub-item {
+        padding: 1rem 1.2rem;
+        margin-bottom: 0.6rem;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        transition: all 0.2s ease;
+      }
+
+      .pub-item:hover {
+        border-color: var(--color-primary);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-1px);
+      }
+
+      .pub-item__title {
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: var(--color-text);
+        margin-bottom: 0.25rem;
+      }
+
+      .pub-item__authors {
+        font-size: 0.83rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 0.2rem;
+      }
+
+      .pub-item__venue {
+        font-size: 0.82rem;
+        font-style: italic;
+        color: var(--color-text-secondary);
+      }
+
+      .pub-item__links {
+        margin-top: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .pub-item__links a {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.6rem;
+        border-radius: 4px;
+        text-decoration: none;
+        background: var(--color-primary-light);
+        color: var(--color-primary);
+        transition: all 0.15s ease;
+      }
+
+      .pub-item__links a:hover {
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      /* Teaching */
+      .teaching-grid {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .teaching-card {
+        padding: 1rem 1.2rem;
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+      }
+
+      .teaching-card__code {
+        font-family: var(--font-mono);
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        white-space: nowrap;
+      }
+
+      .teaching-card__name {
+        font-size: 0.92rem;
+        color: var(--color-text);
+      }
+
+      .teaching-prev {
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        color: var(--color-text-secondary);
+      }
+
+      /* Recruitment CTA */
+      .cta-box {
+        background: linear-gradient(135deg, var(--color-primary-light), rgba(124,58,237,0.06));
+        border: 1px solid var(--color-primary);
+        border-radius: var(--radius);
+        padding: 1.5rem 1.8rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+      }
+
+      .cta-box__title {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+        color: var(--color-text);
+      }
+
+      .cta-box__text {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 0.6rem;
+      }
+
+      .cta-box ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0.8rem;
+      }
+
+      .cta-box ul li {
+        font-size: 0.88rem;
+        color: var(--color-text);
+        padding: 0.2rem 0;
+        padding-left: 1.2rem;
+        position: relative;
+      }
+
+      .cta-box ul li::before {
+        content: '\2022';
+        position: absolute;
+        left: 0;
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+
+      /* Service pills */
+      .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .service-list span {
+        padding: 0.35rem 0.8rem;
+        background: var(--color-bg-alt);
+        border: 1px solid var(--color-border);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 2rem 0;
+        margin-top: 2rem;
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+        font-size: 0.82rem;
+        color: var(--color-text-secondary);
+      }
+
+      /* Responsive */
+      @media (max-width: 640px) {
+        .hero__grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 1.5rem;
+        }
+
+        .hero__avatar {
+          width: 140px;
+          height: 140px;
+          margin: 0 auto;
+        }
+
+        .hero__links {
+          justify-content: center;
+        }
+
+        .nav__links {
+          gap: 1rem;
+        }
+
+        .nav__links a {
+          font-size: 0.8rem;
+        }
+
+        .section__title {
+          font-size: 1.3rem;
+        }
+
+        .interests {
+          justify-content: center;
+        }
+      }
+
+      /* Scroll animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Floating theme toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+      <!-- Hero / About -->
+<section class="hero section" id="about">
+  <div class="hero__grid">
+    <img src="/images/profile.png" alt="WeiQin Chuah" class="hero__avatar" />
+    <div class="hero__info">
+      <h1>WeiQin Chuah</h1>
+      <p class="hero__title">Lecturer (ECR) &middot; RMIT University, Melbourne</p>
+      <p class="hero__desc">
+        School of Mechanical, Mechatronics and Manufacturing Engineering.<br />
+        Member of the <a href="https://www.rmit.edu.au/about/schools-colleges/engineering/research/research-groups/intelligent-automation-research-group">Intelligent Automation Research Group</a>.<br />
+        Ph.D. RMIT University, 2022.
+      </p>
+      <div class="hero__links">
+        <a href="mailto:wei.qin.chuah@rmit.edu.au" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://scholar.google.com.au/citations?hl=en&amp;user=u11O9ggAAAAJ" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://github.com/waychin-weiqin" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/weiqin-chuah" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://orcid.org/0000-0001-6020-4660" title="ORCID"><i class="ai ai-orcid"></i></a>
+        <a href="/files/pdf/cv.pdf" title="CV"><i class="fas fa-file-pdf"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Research Interests -->
+<section class="section fade-in" id="research">
+  <h2 class="section__title">Research Interests</h2>
+  <div class="research-grid">
+    <div class="research-card">
+      <div class="research-card__icon"><i class="fas fa-brain"></i></div>
+      <h3 class="research-card__title">Robust Representation Learning</h3>
+      <ul class="research-card__topics">
+        <li>Large-scale self-supervised learning</li>
+        <li>Foundation models for vision</li>
+        <li>Shortcut avoidance &amp; OOD robustness</li>
+        <li>Test-time adaptation</li>
+      </ul>
+    </div>
+    <div class="research-card">
+      <div class="research-card__icon"><i class="fas fa-cube"></i></div>
+      <h3 class="research-card__title">Geometric Computer Vision</h3>
+      <ul class="research-card__topics">
+        <li>3D scene understanding</li>
+        <li>Neural rendering (NeRF &amp; 3DGS)</li>
+        <li>Depth estimation &amp; stereo matching</li>
+        <li>AR / VR</li>
+      </ul>
+    </div>
+    <div class="research-card">
+      <div class="research-card__icon"><i class="fas fa-industry"></i></div>
+      <h3 class="research-card__title">AI for Engineering</h3>
+      <ul class="research-card__topics">
+        <li>Anomaly detection &amp; quality inspection</li>
+        <li>Digital twin modelling</li>
+        <li>Robotics</li>
+        <li>Mapping &amp; localisation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Publications -->
+<section class="section fade-in" id="publications">
+  <h2 class="section__title">Publications</h2>
+
+  <h3 class="pub-year">2026</h3>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Modernizing Livestock Operations: Smart Feedlot Technologies and Their Impact</div>
+    <div class="pub-item__authors">S.D. Dao, A.K. Gostar, R. Tennakoon, <strong>W.Q. Chuah</strong>, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">Animals, 16(8), 1244, 2026</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Joint Modeling of Corruption-Driven and Information-Limited Uncertainty for Robust 3D Gaussian Splatting</div>
+    <div class="pub-item__authors">Z. Hui, A.K. Gostar, <strong>W.Q. Chuah</strong>, A. Bab-Hadiashar, R. Tennakoon</div>
+    <div class="pub-item__venue">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2026</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Logit-Adjusted Test-Time Adaptation under Partial Class Imbalance</div>
+    <div class="pub-item__authors">T. Weerasinghe, R. Tennakoon, <strong>W.Q. Chuah</strong>, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2026</div>
+  </div>
+
+  <h3 class="pub-year">2025</h3>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Automated Keypoint Estimation for Self-Piercing Rivet Joints Using micro-CT Imaging and Transfer Learning</div>
+    <div class="pub-item__authors"><strong>W.Q. Chuah</strong>, R. Tennakoon, A. Freis, M. Easton, R. Hoseinnezhad, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">arXiv preprint arXiv:2502.16752, 2025</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Revisiting Entropy Minimization for Long-Sequence Continual Test-Time Adaptation</div>
+    <div class="pub-item__authors"><strong>W.Q. Chuah</strong>, R. Tennakoon, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">36th British Machine Vision Conference (BMVC), 2025</div>
+  </div>
+
+  <h3 class="pub-year">2024</h3>
+
+  <div class="pub-item">
+    <div class="pub-item__title">LAF-NeRF: Learning Artifact-Free Neural Radiance Fields from Un-Curated Image Collections with Corruptions</div>
+    <div class="pub-item__authors">Z. Hui, <strong>W.Q. Chuah</strong>, A.K. Gostar, A. Bab-Hadiashar, R. Tennakoon</div>
+    <div class="pub-item__venue">International Conference on Digital Image Computing: Techniques and Applications (DICTA), 2024</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Enhanced Online Test-Time Adaptation with Feature-Weight Cosine Alignment</div>
+    <div class="pub-item__authors"><strong>W.Q. Chuah</strong>, R. Tennakoon, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">arXiv preprint arXiv:2405.07171, 2024</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Single Domain Generalization via Normalised Cross-Correlation Based Convolutions</div>
+    <div class="pub-item__authors"><strong>W.Q. Chuah</strong>, R. Tennakoon, R. Hoseinnezhad, D. Suter, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2024</div>
+    <div class="pub-item__links">
+      <a href="https://openaccess.thecvf.com/content/WACV2024/papers/Chuah_Single_Domain_Generalization_via_Normalised_Cross-Correlation_Based_Convolutions_WACV_2024_paper.pdf">Paper</a>
+      <a href="https://github.com/waychin-weiqin/XCNorm">Code</a>
+    </div>
+  </div>
+
+  <h3 class="pub-year">2023</h3>
+
+  <div class="pub-item">
+    <div class="pub-item__title">An Information-Theoretic Method to Automatic Shortcut Avoidance and Domain Generalization for Dense Prediction Tasks</div>
+    <div class="pub-item__authors"><strong>W.Q. Chuah</strong>, R. Tennakoon, R. Hoseinnezhad, D. Suter, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 45(9), 10615-10631, 2023</div>
+    <div class="pub-item__links">
+      <a href="https://ieeexplore.ieee.org/abstract/document/10106000/">Paper</a>
+    </div>
+  </div>
+
+  <h3 class="pub-year">2022</h3>
+
+  <div class="pub-item">
+    <div class="pub-item__title">ITSA: An Information-Theoretic Approach to Automatic Shortcut Avoidance and Domain Generalization in Stereo Matching Networks</div>
+    <div class="pub-item__authors"><strong>W.Q. Chuah</strong>, R. Tennakoon, R. Hoseinnezhad, A. Bab-Hadiashar, D. Suter</div>
+    <div class="pub-item__venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022</div>
+    <div class="pub-item__links">
+      <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Chuah_ITSA_An_Information-Theoretic_Approach_to_Automatic_Shortcut_Avoidance_and_Domain_CVPR_2022_paper.html">Paper</a>
+      <a href="https://github.com/waychin-weiqin/ITSA">Code</a>
+    </div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Semantic Guided Long Range Stereo Depth Estimation for Safer Autonomous Vehicle Applications</div>
+    <div class="pub-item__authors">W. Chuah, R. Tennakoon, R. Hoseinnezhad, D. Suter, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">IEEE Transactions on Intelligent Transportation Systems, 23(10), 18916-18926, 2022</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Towards Building a Vet-Assist System: Animal Pose Estimation and Counting Walking Steps</div>
+    <div class="pub-item__authors"><strong>W.Q. Chuah</strong>, A. Bab-Hadiashar, R. Tennakoon, F. Zambetta et al.</div>
+    <div class="pub-item__venue">Australasian Conference on Robotics and Automation (ACRA), 2022</div>
+  </div>
+
+  <h3 class="pub-year">2021</h3>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Deep Learning-Based Incorporation of Planar Constraints for Robust Stereo Depth Estimation in Autonomous Vehicle Applications</div>
+    <div class="pub-item__authors">W. Chuah, R. Tennakoon, R. Hoseinnezhad, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">IEEE Transactions on Intelligent Transportation Systems, 23(7), 6654-6665, 2021</div>
+  </div>
+
+  <h3 class="pub-year">2019</h3>
+
+  <div class="pub-item">
+    <div class="pub-item__title">Machine Vision-Enabled Traffic Controller for Safer and Smoother Traffic Flow Around Construction Sites</div>
+    <div class="pub-item__authors">W. Chuah, R. Tennakoon, R. Hoseinnezhad, A. Bab-Hadiashar</div>
+    <div class="pub-item__venue">IEEE Intelligent Transportation Systems Conference (ITSC), 4255-4260, 2019</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-item__title">State Transition for Statistical SLAM Using Planar Features in 3D Point Clouds</div>
+    <div class="pub-item__authors">A.K. Gostar, C. Fu, W. Chuah, M.I. Hossain, R. Tennakoon, A. Bab-Hadiashar et al.</div>
+    <div class="pub-item__venue">Sensors, 19(7), 1614, 2019</div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Teaching -->
+<section class="section fade-in" id="teaching">
+  <h2 class="section__title">Teaching</h2>
+  <div class="teaching-grid">
+    <div class="teaching-card">
+      <span class="teaching-card__code">MANU2167</span>
+      <span class="teaching-card__name">Design for Assembly and Automation</span>
+    </div>
+    <div class="teaching-card">
+      <span class="teaching-card__code">MANU2548</span>
+      <span class="teaching-card__name">Automated System Design</span>
+    </div>
+  </div>
+  <p class="teaching-prev"><strong>Previously:</strong> Computational Machine Learning (2022), Deep Learning (2022), Digital Fundamentals (2021)</p>
+</section>
+
+<hr class="divider" />
+
+<!-- Prospective Students -->
+<section class="section fade-in" id="students">
+  <h2 class="section__title">Prospective Students</h2>
+  <div class="cta-box">
+    <div class="cta-box__title">I am actively recruiting PhD and Master by Research students</div>
+    <ul>
+      <li>Geometric computer vision</li>
+      <li>Robust representation learning for vision</li>
+      <li>AI for engineering</li>
+    </ul>
+    <p class="cta-box__text">If you are interested in working with me, please get in touch with your CV and a brief research statement.</p>
+  </div>
+</section>
+
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        &copy; 2026 WeiQin Chuah &middot; Built with Jekyll
+      </div>
+    </footer>
+
+    <script>
+      // Dark mode toggle
+      function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+      }
+
+      function updateIcon(theme) {
+        const icon = document.querySelector('.theme-toggle i');
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+
+      // Load saved theme
+      const saved = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', saved);
+      updateIcon(saved);
+
+      // Scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    </script>
+  </body>
+</html>
+

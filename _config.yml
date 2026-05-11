@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "WeiQin Chuah"
 title_separator          : "-"
 name                     : &name "WeiQin Chuah"
-description              : &description "Postdoctoral Researcher, School of Engineering, RMIT University"
+description              : &description "Lecturer, School of Mechanical, Mechatronics and Manufacturing Engineering, RMIT University"
 url                      : https://waychin-weiqin.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "waychin-weiqin/waychin-weiqin.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "WeiQin Chuah"
   avatar           : "profile.png"
-  bio              : "Research Fellow at RMIT University, specialised in computer vision, deep learning."
+  bio              :
   location         : "Melbourne, Victoria, Australia"
   employer         :
   pubmed           : 
@@ -175,12 +175,6 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
   portfolio:
     output: true
     permalink: /:collection/:path/
@@ -207,8 +201,8 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
+      layout: homepage
+      author_profile: false
   # _teaching
   - scope:
       path: ""

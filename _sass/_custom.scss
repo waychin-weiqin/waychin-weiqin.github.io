@@ -1,0 +1,230 @@
+/* Modern academic page design */
+
+// Accent gradient
+$accent-gradient: linear-gradient(135deg, $primary-color, #6200ea);
+
+// Smooth page entrance
+#main {
+  animation: fadeSlideIn 0.5s ease both;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Masthead
+.masthead {
+  border-bottom: none;
+  background: #fafbfc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+// Sidebar / Author profile
+.author__avatar img {
+  border-radius: 50%;
+  border: 3px solid $primary-color;
+  box-shadow: 0 4px 14px rgba($primary-color, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba($primary-color, 0.3);
+  }
+}
+
+.author__name {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.author__bio {
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: $gray;
+}
+
+.author__urls {
+  .author__urls-wrapper li a {
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Page content
+.page__content {
+  font-size: 0.95em;
+  line-height: 1.75;
+
+  // Section headings with accent bar
+  h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: 2.5em;
+    margin-bottom: 0.8em;
+    font-weight: 700;
+    font-size: 1.4em;
+    position: relative;
+    padding-left: 0.8em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.15em;
+      bottom: 0.15em;
+      width: 4px;
+      border-radius: 2px;
+      background: $accent-gradient;
+    }
+  }
+
+  h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: $dark-gray;
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
+  }
+
+  // Horizontal rules as section dividers
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, $border-color, transparent);
+    margin: 2.5em 0;
+  }
+
+  // Research interest bullets
+  > ul {
+    list-style: none;
+    padding-left: 0;
+
+    > li {
+      position: relative;
+      padding-left: 1.5em;
+      margin-bottom: 0.7em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $accent-gradient;
+      }
+
+      strong {
+        color: $darker-gray;
+      }
+    }
+  }
+
+  // Publication list styling
+  h3 + ul {
+    list-style: none;
+    padding-left: 0;
+
+    > li {
+      padding: 1em 1.2em;
+      margin-bottom: 0.8em;
+      border-left: 3px solid $lighter-gray;
+      background: #fafbfc;
+      border-radius: 0 6px 6px 0;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &::before {
+        display: none;
+      }
+
+      &:hover {
+        border-left-color: $primary-color;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 0.2em;
+        color: $darker-gray;
+        font-size: 0.95em;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 0.4em;
+        padding: 0.15em 0.6em;
+        font-size: 0.8em;
+        font-weight: 600;
+        border-radius: 3px;
+        background: rgba($primary-color, 0.08);
+        color: $primary-color;
+        text-decoration: none;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background: rgba($primary-color, 0.15);
+        }
+      }
+    }
+  }
+
+  // Prospective students callout box
+  > ul + p,
+  h2 + p {
+    // default paragraph styling
+  }
+}
+
+// Callout/highlight box for recruitment section
+.page__content h2:nth-of-type(5) + p,
+.page__content h2:nth-of-type(5) + p + ul {
+  // Targets "Prospective Students" section
+}
+
+// Make the recruitment section stand out
+.page__content {
+  // Style the paragraph after the student recruitment list
+  > ul + p:last-of-type {
+    // contact paragraph
+  }
+}
+
+// Card-like styling for key info blocks
+.notice--info {
+  border-radius: 8px;
+  border-left: 4px solid $primary-color;
+  background: rgba($primary-color, 0.04);
+}
+
+// Links
+.page__content a:not([class]) {
+  color: $primary-color;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($primary-color, 0.3);
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-bottom-color: $primary-color;
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .page__content h2 {
+    font-size: 1.2em;
+    margin-top: 2em;
+  }
+}
