@@ -11,7 +11,7 @@ redirect_from:
 <!-- Hero / About -->
 <section class="hero section" id="about">
   <div class="hero__grid">
-    <img src="/images/profile.png" alt="WeiQin Chuah" class="hero__avatar">
+    <img src="/images/profile.jpeg" alt="WeiQin Chuah" class="hero__avatar">
     <div class="hero__info">
       <h1>WeiQin Chuah</h1>
       <p class="hero__title">Lecturer (ECR) &middot; RMIT University, Melbourne</p>
@@ -22,10 +22,10 @@ redirect_from:
       </p>
       <div class="hero__links">
         <a href="mailto:wei.qin.chuah@rmit.edu.au" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://scholar.google.com.au/citations?hl=en&user=u11O9ggAAAAJ" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://scholar.google.com.au/citations?hl=en&user=u11O9ggAAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
         <a href="https://github.com/waychin-weiqin" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/weiqin-chuah" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://orcid.org/0000-0001-6020-4660" title="ORCID"><i class="ai ai-orcid"></i></a>
+        <a href="https://orcid.org/0000-0001-6020-4660" title="ORCID"><i class="fab fa-orcid"></i></a>
         <a href="/files/pdf/cv.pdf" title="CV"><i class="fas fa-file-pdf"></i></a>
       </div>
     </div>

@@ -19,7 +19,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Academicons -->
-    <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
     {% include head/custom.html %}
 
@@ -123,11 +123,16 @@
 
       .hero__avatar {
         width: 180px;
-        height: 180px;
-        border-radius: 50%;
+        border-radius: var(--radius);
         object-fit: cover;
         border: 3px solid var(--color-border);
         box-shadow: var(--shadow-lg);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .hero__avatar:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: var(--shadow-lg), 0 12px 32px rgba(0,0,0,0.12);
       }
 
       .hero__info h1 {
